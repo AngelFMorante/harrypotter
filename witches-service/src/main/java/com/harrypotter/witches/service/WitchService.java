@@ -1,7 +1,7 @@
-package com.harrypotter.service;
+package com.harrypotter.witches.service;
 
-import com.harrypotter.entity.Witch;
-import com.harrypotter.repository.WitchRepository;
+import com.harrypotter.witches.entity.Witch;
+import com.harrypotter.witches.repository.WitchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

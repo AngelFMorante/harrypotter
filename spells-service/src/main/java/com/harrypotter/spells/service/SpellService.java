@@ -1,7 +1,7 @@
-package com.harrypotter.service;
+package com.harrypotter.spells.service;
 
-import com.harrypotter.entity.Spell;
-import com.harrypotter.repository.SpellRepository;
+import com.harrypotter.spells.entity.Spell;
+import com.harrypotter.spells.repository.SpellRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

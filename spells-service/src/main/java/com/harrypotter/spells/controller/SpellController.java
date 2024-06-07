@@ -1,7 +1,7 @@
-package com.harrypotter.controller;
+package com.harrypotter.spells.controller;
 
-import com.harrypotter.entity.Spell;
-import com.harrypotter.service.SpellService;
+import com.harrypotter.spells.entity.Spell;
+import com.harrypotter.spells.service.SpellService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,8 +1,7 @@
-package com.harrypotter.entity;
+// Clase Witch
+package com.harrypotter.witches.entity;
 
 import jakarta.persistence.*;
-
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -13,8 +12,7 @@ public class Witch {
     private String name;
     private int age;
 
-    @OneToMany(mappedBy = "witch", cascade = CascadeType.ALL)
-    private List<Spell> spells;
+    // No hay referencia a la lista de hechizos en esta clase
 
     public Long getId() {
         return id;
@@ -40,25 +38,17 @@ public class Witch {
         this.age = age;
     }
 
-    public List<Spell> getSpells() {
-        return spells;
-    }
-
-    public void setSpells(List<Spell> spells) {
-        this.spells = spells;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Witch witch = (Witch) o;
-        return age == witch.age && Objects.equals(id, witch.id) && Objects.equals(name, witch.name) && Objects.equals(spells, witch.spells);
+        return age == witch.age && Objects.equals(id, witch.id) && Objects.equals(name, witch.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, age, spells);
+        return Objects.hash(id, name, age);
     }
 
     @Override
@@ -67,7 +57,6 @@ public class Witch {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", spells=" + spells +
                 '}';
     }
 }

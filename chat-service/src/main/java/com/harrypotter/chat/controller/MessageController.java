@@ -1,6 +1,5 @@
 package com.harrypotter.chat.controller;
 
-
 import com.harrypotter.chat.entity.Message;
 import com.harrypotter.chat.service.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
-package com.harrypotter.controller;
+package com.harrypotter.witches.controller;
 
-import com.harrypotter.entity.Witch;
-import com.harrypotter.service.WitchService;
+import com.harrypotter.witches.entity.Witch;
+import com.harrypotter.witches.service.WitchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

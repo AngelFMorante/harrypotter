@@ -1,7 +1,7 @@
-package com.harrypotter.entity;
+// Clase Spell
+package com.harrypotter.spells.entity;
 
 import jakarta.persistence.*;
-
 import java.util.Objects;
 
 @Entity
@@ -12,9 +12,7 @@ public class Spell {
     private String name;
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "witch_id")
-    private Witch witch;
+    // No hay referencia a la bruja en esta clase
 
     public Long getId() {
         return id;
@@ -40,25 +38,17 @@ public class Spell {
         this.description = description;
     }
 
-    public Witch getWitch() {
-        return witch;
-    }
-
-    public void setWitch(Witch witch) {
-        this.witch = witch;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Spell spell = (Spell) o;
-        return Objects.equals(id, spell.id) && Objects.equals(name, spell.name) && Objects.equals(description, spell.description) && Objects.equals(witch, spell.witch);
+        return Objects.equals(id, spell.id) && Objects.equals(name, spell.name) && Objects.equals(description, spell.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, witch);
+        return Objects.hash(id, name, description);
     }
 
     @Override
@@ -67,7 +57,6 @@ public class Spell {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", witch=" + witch +
                 '}';
     }
 }
