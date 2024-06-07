@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>witches-service</artifactId>
+    <artifactId>witches-services</artifactId>
     <name>Witches Service</name>
     <description>Service for managing witches</description>
 

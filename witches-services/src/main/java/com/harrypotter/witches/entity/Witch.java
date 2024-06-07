@@ -1,4 +1,3 @@
-// Clase Witch
 package com.harrypotter.witches.entity;
 
 import jakarta.persistence.*;

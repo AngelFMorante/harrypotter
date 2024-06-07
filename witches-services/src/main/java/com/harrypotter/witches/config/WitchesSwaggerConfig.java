@@ -1,4 +1,4 @@
-package com.harrypotter.witches.config;
+package main.java.com.harrypotter.witches.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import org.springdoc.core.GroupedOpenApi;
